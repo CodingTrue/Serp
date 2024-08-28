@@ -9,12 +9,14 @@ args = ["main.py", "-c", "code/program.py"]
 # args = sys.argv
 
 def compile(targetfile: str, outputpath: str = ""):
-    print(f"targetfile: {targetfile}")
-    print(f"outputpath: {outputpath}")
-    print("-"*32)
-
     targetfile = FilePath(targetfile)
     outputpath = FilePath(outputpath + targetfile.getPureFilename() + ".o" if outputpath == "" else outputpath)
+
+    print(f"targetfile: {targetfile.getPath()}")
+    print(f"outputpath: {outputpath.getPath()}")
+    print("-"*32)
+
+
 
     Lexer(filePath=targetfile)
 
