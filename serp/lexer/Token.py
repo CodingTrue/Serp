@@ -1,6 +1,7 @@
 import enum
 
 class TokenType(enum.Enum):
+    INDENTATION     = "INDEN"
     STRING_LITERAL  = "STR_LIT"
     NUMBER_LITERAL  = "NUM_LIT"
     EOL             = "EOL"
@@ -8,7 +9,11 @@ class TokenType(enum.Enum):
     DQUOTE          = "DQUOTE"
     SQUOTE          = "SQUOTE"
     PLUS            = "PLUS"
+    MINUS           = "MINUS"
+    ARROW_OPEN      = "ARW_OP"
+    ARROW_CLOSED    = "ARW_CL"
     COLON           = "COL"
+    COMMA           = "COMMA"
     LPAREN          = "LPAREN"
     RPAREN          = "RPAREN"
 

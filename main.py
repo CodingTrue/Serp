@@ -16,9 +16,8 @@ def compile(targetfile: str, outputpath: str = ""):
     print(f"outputpath: {outputpath.getPath()}")
     print("-"*32)
 
-
-
-    Lexer(filePath=targetfile)
+    lexer = Lexer(filePath=targetfile)
+    lexer.lex()
 
 argChecker = ArgumentChecker(args)
 
